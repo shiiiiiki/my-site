@@ -380,7 +380,6 @@ a {
 }
 
 .navbar{
-    list-style: none;
     position: fixed;
     top: 0;
     width: 100%;
@@ -400,7 +399,7 @@ a {
 
 .navbar li a{
     margin: 0;
-    padding: 15px 20px;
+    padding: 15px 40px 15px 10px;
     line-height: 30px;
 }
 
@@ -410,7 +409,6 @@ a {
 }
 
 .dropdown{
-    text-align: justify;
     position: absolute;
     top: 100%;
     left: 0;
@@ -419,6 +417,7 @@ a {
 .dropdown li{
     text-align: center;
     width: 100%;
+    position: relative;
 }
 
 .navbar li:hover ul{
@@ -426,7 +425,6 @@ a {
 }
 
 .float-nav{
-    text-align: justify;
     position: absolute;
     top: 0;
     left: 100%;
@@ -452,19 +450,125 @@ a {
     visibility: visible;
 }
 
-.navicon{
-    margin: 0 5px;
-    float: right;
-    width: 30px;
-    height: 30px;
-}
-.navicongr{
-    margin: 0 5px;
-    float: left;
-    width: 30px;
-    height: 30px;
+.navbar>li>a:before{
+    content: "";
+    background: url("images/spritesheet.png") 32px 64px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 5%;
 }
 
+.navbar>li:hover>a:before{
+    background: url("images/spritesheet.png") 64px 64px;
+    transition: 0.3s ease;
+}
 
+.navbar>li+li>a:before{
+    content: "";
+    background: url("images/spritesheet.png") 96px 64px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 5%;
+}
+
+.navbar>li+li:hover>a:before{
+    background: url("images/spritesheet.png") 128px 64px;
+    transition: 0.3s ease;
+}
+
+.navbar>li+li+li>a:before{
+    content: "";
+    background: url("images/spritesheet.png") 161px 64px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 5%;
+}
+
+.navbar>li+li+li:hover>a:before{
+    background: url("images/spritesheet.png") 161px 64px ;
+    transform: rotate(180deg);
+    transition: 0.3s ease;
+}
+
+.dropdown>li>a{
+    padding: 15px 10px;
+}
+
+.drop-fl>a:before{
+    content: "";
+    background: url("images/spritesheet.png") 191px 64px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 5%;
+}
+
+.dropdown>li+li+li+li+li>a:before{
+    content: "";
+    background: url("images/spritesheet.png") 218px 64px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 5%;
+}
+
+.soc-nav{
+    list-style: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    background-color: #6DBEEB;
+    text-align: center;
+    z-index: 10;
+    font-size: 0;
+}
+
+.soc-nav li a{
+    padding: 0;
+    margin: 0;
+    background: url("images/spritesheet2.png") 640px 64px;
+    display: block;
+    width: 64px;
+    height: 64px;
+    font-size: 20px;
+
+}
+
+.soc-nav li+li a{
+    background-position: 832px 64px;
+}
+
+.soc-nav li+li+li a{
+    background-position: 960px 64px;
+}
+
+.soc-nav li+li+li+li a{
+    background-position: 1088px 64px;
+}
+
+.soc-nav li:hover a{
+    background-position: 704px 64px;
+    transition: 0.3s ease;
+
+}
+
+.soc-nav li+li:hover a{
+    background-position: 768px 64px;
+    transition: 0.3s ease;
+}
+
+.soc-nav li+li+li:hover a{
+    background-position: 896px 64px;
+    transition: 0.3s ease;
+}
+
+.soc-nav li+li+li+li:hover a{
+    background-position: 1024px 64px;
+    transition: 0.3s ease;
+}
 
 
