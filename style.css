@@ -76,12 +76,14 @@ html, body {
     margin: 10px 0;
     line-height: 100%;
 }
-.wrapper a{
+
+.wrapper a {
     width: 300px;
     text-align: center;
     margin: 15px auto;
 
 }
+
 .sub-title {
     color: #6DBEEB;
     font-size: 40px;
@@ -153,10 +155,12 @@ a {
     padding: 10px 20px;
     margin: 10px 0 20px 0;
 }
+
 .tb-main {
     background-color: azure;
 
 }
+
 .ib-main {
     font-size: 0;
 }
@@ -191,39 +195,47 @@ a {
     background-color: cornsilk;
     font-size: 20px;
 }
+
 .flt-main {
     background-color: cornsilk;
     font-size: 20px;
 }
+
 .fl-main .tb-text {
     background-color: cornsilk;
     outline: 2px solid cadetblue;
 }
+
 .in-fl-left {
     outline: 2px solid cadetblue;
     float: left;
 }
+
 .wd3 {
     width: 33%;
 }
+
 .wd7 {
     width: 67%;
 }
+
 .wd5 {
     width: 50%;
 }
+
 .fl-main:after {
     content: "";
     clear: both;
     display: block;
 }
+
 .in-fl-left:after {
     content: "";
     clear: both;
     display: block;
 }
 
-.clr{
+.clr {
     clear: both;
 }
 
@@ -306,7 +318,7 @@ a {
 }
 
 .d {
-    grid-area:d;
+    grid-area: d;
 }
 
 .d1 {
@@ -363,23 +375,22 @@ a {
 }
 
 .gal {
-    display: inline-block;
-    background-color: darkblue;
-    color: aliceblue;
+    display: block;
     font-size: 22px;
     position: sticky;
     z-index: 2;
-    top: calc(50% - 135px);
+    top: calc(50% - 100px);
     left: 0;
-    width: 250px;
+    width: 200px;
+    height: 0;
 }
 
-.gal a:hover{
+.gal a:hover {
     background-color: #38637A;
     transition: 0.3s ease;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -389,7 +400,7 @@ a {
     font-size: 0;
 }
 
-.navbar li{
+.navbar li {
     display: inline-block;
     text-decoration: none;
     position: relative;
@@ -397,188 +408,242 @@ a {
     font-weight: 300;
 }
 
-.navbar li a{
+.navbar li a {
     margin: 0;
-    padding: 15px 40px 15px 10px;
+    padding: 15px 10px 15px 40px;
     line-height: 30px;
 }
 
-.navbar li a:hover{
+.navbar li a:hover {
     background-color: #38637A;
     transition: 0.3s ease;
 }
 
-.dropdown{
+.dropdown {
     position: absolute;
     top: 100%;
     left: 0;
     display: none;
 }
-.dropdown li{
+
+.dropdown li {
     text-align: center;
     width: 100%;
     position: relative;
 }
 
-.navbar li:hover ul{
+.navbar li:hover ul {
     display: block;
 }
 
-.float-nav{
+.float-nav {
     position: absolute;
     top: 0;
     left: 100%;
     visibility: hidden;
+
 }
 
-.drop-fl:hover .float-nav{
+.drop-fl:hover .float-nav {
     visibility: visible;
+    transform: scale(1.3) translate(15px, 0);
+    z-index: 12;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 1s ease-in-out;
 }
 
-.drop-fl{
+.drop-fl {
     position: relative;
 }
 
-.grid-nav{
+.grid-nav {
     text-align: justify;
     position: absolute;
-    bottom: 0;
+    bottom: 1000%;
     right: 100%;
     visibility: hidden;
 }
-.drop-fl:hover .grid-nav{
+
+.drop-fl:hover .grid-nav {
     visibility: visible;
+    bottom: 0;
+    transform: rotateY(720deg);
+    transition: all 1s ease-out;
 }
 
-.navbar>li>a:before{
+.navbar>li+li+li>a{
+    padding-left: 10px;
+    padding-right: 40px;
+}
+.navbar > li > a:before {
     content: "";
-    background: url("images/spritesheet.png") 32px 64px;
+    background: url("images/spritesheet.png") 672px 64px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 5%;
+    transition: 0.3s ease;
+}
+
+.navbar > li:hover > a:before {
+    background: url("images/spritesheet.png") 704px 64px;
+    transition: 0.3s ease;
+}
+
+.navbar > li + li > a:before {
+    content: "";
+    background: url("images/spritesheet.png") 736px 64px;
     width: 32px;
     height: 32px;
     position: absolute;
     right: 5%;
-}
-
-.navbar>li:hover>a:before{
-    background: url("images/spritesheet.png") 64px 64px;
     transition: 0.3s ease;
 }
 
-.navbar>li+li>a:before{
+.navbar > li + li:hover > a:before {
+    background: url("images/spritesheet.png") 768px 64px;
+    transition: 0.3s ease;
+}
+
+.navbar > li + li + li > a:before {
     content: "";
-    background: url("images/spritesheet.png") 96px 64px;
+    background: url("images/spritesheet.png") 638px 64px;
     width: 32px;
     height: 32px;
     position: absolute;
-    right: 5%;
-}
-
-.navbar>li+li:hover>a:before{
-    background: url("images/spritesheet.png") 128px 64px;
+    left: auto;
     transition: 0.3s ease;
 }
 
-.navbar>li+li+li>a:before{
-    content: "";
-    background: url("images/spritesheet.png") 161px 64px;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    right: 5%;
-}
-
-.navbar>li+li+li:hover>a:before{
-    background: url("images/spritesheet.png") 161px 64px ;
-    transform: rotate(180deg);
+.navbar > li + li + li:hover > a:before {
+    background: url("images/spritesheet.png") 604px 64px;
     transition: 0.3s ease;
 }
 
-.dropdown>li>a{
+.dropdown > li > a {
     padding: 15px 10px;
 }
 
-.drop-fl>a:before{
+.drop-fl > a:before {
     content: "";
-    background: url("images/spritesheet.png") 191px 64px;
+    background: url("images/spritesheet.png") 579px 64px;
     width: 32px;
     height: 32px;
     position: absolute;
     right: 5%;
 }
 
-.dropdown>li+li+li+li+li>a:before{
+.dropdown > li + li + li + li + li > a:before {
     content: "";
-    background: url("images/spritesheet.png") 218px 64px;
+    background: url("images/spritesheet.png") 548px 64px;
     width: 32px;
     height: 32px;
     position: absolute;
     left: 5%;
 }
 
-.soc-nav{
+.soc-nav {
     list-style: none;
     position: fixed;
-    bottom: 0;
-    right: 0;
-    width: auto;
+    top: calc(50% - 150px);
+    right: -300px;
+    width: 350px;
+    height: 300px;
     background-color: #6DBEEB;
     text-align: center;
     z-index: 10;
     font-size: 0;
+    transition: all 1s ease;
 }
 
-.soc-nav li a{
+.soc-nav:hover{
+    right: 0;
+    transition: all 1s ease;
+}
+
+.soc-nav div{
+    width: 300px;
+    font-size: 50px;
+    margin-left: 10px;
+    color: black;
+    transform: rotate(90deg);
+    transform-origin: 10px 10px;
+
+}
+
+.soc-nav ul{
+    padding: 50px 80px;
+    transform: rotate(45deg);
+    letter-spacing: 10px;
+}
+
+.soc-nav li{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.soc-nav li a {
     padding: 0;
     margin: 0;
-    background: url("images/spritesheet2.png") 640px 64px;
+    background: url("images/spritesheet.png");
     display: block;
     width: 64px;
     height: 64px;
     font-size: 20px;
-
-}
-
-.soc-nav li+li a{
-    background-position: 832px 64px;
-}
-
-.soc-nav li+li+li a{
-    background-position: 960px 64px;
-}
-
-.soc-nav li+li+li+li a{
-    background-position: 1088px 64px;
-}
-
-.soc-nav li:hover a{
-    background-position: 704px 64px;
     transition: 0.3s ease;
-
+    overflow: hidden;
 }
 
-.soc-nav li+li:hover a{
-    background-position: 768px 64px;
-    transition: 0.3s ease;
+.soc-nav li a{
+    background-position: 128px 64px;
+    transform: rotate(-45deg);
 }
 
-.soc-nav li+li+li:hover a{
-    background-position: 896px 64px;
-    transition: 0.3s ease;
-}
-
-.soc-nav li+li+li+li:hover a{
+.soc-nav li + li a {
     background-position: 1024px 64px;
+    transform: rotate(-45deg);
+}
+
+.soc-nav li + li + li a {
+    background-position: 1152px 64px;
+}
+
+.soc-nav li + li + li + li a {
+    background-position: 1280px 64px;
+}
+
+.soc-nav li:hover a {
+    background-position: 64px 64px;
+    transition: 0.3s ease;
+
+}
+
+.soc-nav li + li:hover a {
+    background-position: 960px 64px;
     transition: 0.3s ease;
 }
 
-.footer .soc-nav{
+.soc-nav li + li + li:hover a {
+    background-position: 1088px 64px;
+    transition: 0.3s ease;
+}
+
+.soc-nav li + li + li + li:hover a {
+    background-position: 1216px 64px;
+    transition: 0.3s ease;
+}
+
+.footer .soc-nav {
     background-color: transparent;
     display: flex;
     justify-content: center;
     position: static;
 }
 
-.footer .soc-nav a{
+.footer .soc-nav a {
     background-color: white;
 }
 
