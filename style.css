@@ -554,6 +554,11 @@ a {
     z-index: 10;
     font-size: 0;
     transition: all 1s ease;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .soc-nav:hover{
@@ -562,13 +567,21 @@ a {
 }
 
 .soc-nav div{
-    width: 300px;
+    width: 325px;
     font-size: 50px;
-    margin-left: 10px;
     color: black;
     transform: rotate(90deg);
-    transform-origin: 10px 10px;
+    transform-origin: 25px 10px;
 
+}
+
+@keyframes anim {
+    from {
+        background-color: mediumvioletred;
+    }
+    to {
+        background-color: lime;
+    }
 }
 
 .soc-nav ul{
