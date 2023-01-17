@@ -641,10 +641,15 @@ a {
     display: flex;
     justify-content: center;
     position: static;
+    transform: rotate(360deg);
+    width: auto;
+    margin: 0 auto;
+    height: auto;
 }
 
 .footer .soc-nav a {
     background-color: white;
+    transform: rotate(360deg);
 }
 
 
