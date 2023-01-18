@@ -54,12 +54,15 @@ html, body {
     line-height: 20px;
     font-family: 'Bahnschrift', sans-serif;
     scroll-behavior: smooth;
+
 }
 
 .wrapper {
     width: 1400px;
     margin: 70px auto;
     position: relative;
+    background: radial-gradient(farthest-corner at 400% 500px, transparent 90%, rgba(17, 94, 166, 0.5) 90%), radial-gradient(farthest-corner at -290% 20%, transparent 90%, rgba(115, 222, 183, 0.5) 90%);
+
 }
 
 .main {
@@ -367,11 +370,21 @@ a {
 }
 
 .abs {
-    font-size: 30px;
-    color: #FFF;
     position: absolute;
     width: 100%;
     top: calc(50% - 10px);
+    background: rgb(0, 0, 0, 50%);
+    font-size: 0;
+}
+
+.abs p{
+    font-size: 30px;
+    line-height: 40px;
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+    color: transparent;
+    -webkit-background-clip: text;
+    display: inline-block;
+
 }
 
 .gal {
@@ -471,10 +484,11 @@ a {
     transition: all 1s ease-out;
 }
 
-.navbar>li+li+li>a{
+.navbar > li + li + li > a {
     padding-left: 10px;
     padding-right: 40px;
 }
+
 .navbar > li > a:before {
     content: "";
     background: url("images/spritesheet.png") 672px 64px;
@@ -561,12 +575,12 @@ a {
     animation-timing-function: linear;
 }
 
-.soc-nav:hover{
+.soc-nav:hover {
     right: 0;
     transition: all 1s ease;
 }
 
-.soc-nav div{
+.soc-nav div {
     width: 325px;
     font-size: 50px;
     color: black;
@@ -584,13 +598,13 @@ a {
     }
 }
 
-.soc-nav ul{
+.soc-nav ul {
     padding: 50px 80px;
     transform: rotate(45deg);
     letter-spacing: 10px;
 }
 
-.soc-nav li{
+.soc-nav li {
     display: inline-block;
     width: 64px;
     height: 64px;
@@ -610,7 +624,7 @@ a {
     overflow: hidden;
 }
 
-.soc-nav li a{
+.soc-nav li a {
     background-position: 128px 64px;
     transform: rotate(-45deg);
 }
@@ -658,6 +672,7 @@ a {
     width: auto;
     margin: 0 auto;
     height: auto;
+    animation: none;
 }
 
 .footer .soc-nav a {
