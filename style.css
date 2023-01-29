@@ -609,29 +609,30 @@ a {
     width: 64px;
     height: 64px;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 
 .soc-nav li a {
     padding: 0;
     margin: 0;
-    background: url("images/spritesheet.png");
+    background: url("images/spritesheet.png") 128px 64px;
     display: block;
     width: 64px;
     height: 64px;
     font-size: 20px;
     transition: 0.3s ease;
+    transform: rotate(-45deg);
     overflow: hidden;
+
 }
 
-.soc-nav li a {
+.soc-nav li{
     background-position: 128px 64px;
-    transform: rotate(-45deg);
+
 }
 
 .soc-nav li + li a {
     background-position: 1024px 64px;
-    transform: rotate(-45deg);
 }
 
 .soc-nav li + li + li a {
@@ -645,7 +646,6 @@ a {
 .soc-nav li:hover a {
     background-position: 64px 64px;
     transition: 0.3s ease;
-
 }
 
 .soc-nav li + li:hover a {
@@ -679,6 +679,112 @@ a {
     background-color: white;
     transform: rotate(360deg);
 }
+.container {
+    width: 400px;
+    margin: 50px auto;
+}
+
+form {
+    background: white;
+    padding: 50px;
+    height: 250px;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+form p{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+select{
+    width: 200px;
+    padding: 5px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+    border: none;
+    border-left: 1px solid  white;
+    border-top: 1px solid  white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    appearance: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    background-position: calc(100% - 12px) center !important;
+    background: none;
+}
+select:hover{
+    background: url("images/angledown.svg" ) no-repeat;
+    background-size: 20px 20px;
+}
+input {
+    background: transparent;
+    width: 200px;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+    border-left: 1px solid  white;
+    border-top: 1px solid  white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+input::placeholder{
+    font-size: 20px;
+    font-style: italic;
+    color: #0000;
+    background:
+            linear-gradient(90deg, #4814e3 50%, #000 0)
+            var(--_p,100%)/200% no-repeat;
+    -webkit-background-clip: text;
+    transition: .4s;
+}
+
+input:hover::placeholder{
+    --_p: 0%;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: url("images/button.png") no-repeat;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    bottom: 0;
+    width: 22px;
+    height: 44px;
+}
+
+input[type="button"]:hover{
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #25aae1);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75)
+}
+
+
+
+
+
+
+
+
+
 
 
 
