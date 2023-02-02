@@ -377,7 +377,7 @@ a {
     font-size: 0;
 }
 
-.abs p{
+.abs p {
     font-size: 30px;
     line-height: 40px;
     background: linear-gradient(to right, #ff6e7f, #bfe9ff);
@@ -626,7 +626,7 @@ a {
 
 }
 
-.soc-nav li{
+.soc-nav li {
     background-position: 128px 64px;
 
 }
@@ -679,6 +679,7 @@ a {
     background-color: white;
     transform: rotate(360deg);
 }
+
 .container {
     width: 400px;
     margin: 50px auto;
@@ -697,18 +698,20 @@ form {
     position: relative;
     transition: all 0.2s ease-in-out;
 }
-form p{
+
+form p {
     font-size: 30px;
     margin-bottom: 20px;
 }
-select{
+
+select {
     width: 200px;
     padding: 5px;
     padding-right: 15px;
     margin-bottom: 30px;
     border: none;
-    border-left: 1px solid  white;
-    border-top: 1px solid  white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
     border-radius: 5000px;
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
@@ -718,23 +721,25 @@ select{
     transition: all 0.2s ease-in-out;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     appearance: none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background-position: calc(100% - 12px) center !important;
     background: none;
 }
-select:hover{
-    background: url("images/angledown.svg" ) no-repeat;
+
+select:hover {
+    background: url("images/angledown.svg") no-repeat;
     background-size: 20px 20px;
 }
+
 input {
     background: transparent;
     width: 200px;
     padding: 15px;
     margin-bottom: 30px;
     border: none;
-    border-left: 1px solid  white;
-    border-top: 1px solid  white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
     border-radius: 5000px;
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
@@ -746,20 +751,19 @@ input {
 }
 
 
-input::placeholder{
+input::placeholder {
     font-size: 20px;
     font-style: italic;
     color: #0000;
-    background:
-            linear-gradient(90deg, #4814e3 50%, #000 0)
-            var(--_p,100%)/200% no-repeat;
+    background: linear-gradient(90deg, #4814e3 50%, #000 0) var(--_p, 100%)/200% no-repeat;
     -webkit-background-clip: text;
     transition: .4s;
 }
 
-input:hover::placeholder{
+input:hover::placeholder {
     --_p: 0%;
 }
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -772,11 +776,275 @@ input[type="number"]::-webkit-inner-spin-button {
     height: 44px;
 }
 
-input[type="button"]:hover{
+input[type="button"]:hover {
     background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #25aae1);
     box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75)
 }
 
+.pictures {
+    min-height: 300px;
+    margin-bottom: 30px;
+    padding: 100px;
+    box-sizing: border-box;
+    display: flex;
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+@keyframes color {
+    from {background: #40e495}
+    to {background: #6DBEEB}
+}
+
+.bolt {
+    position: relative;
+    background-color: grey;
+    height: 50px;
+    width: 40px;
+    border-radius: 10px 3px 3px 10px;
+    box-shadow: 0 -60px 0 grey,
+    20px -25px 0 5px grey,
+    40px -25px 0 5px grey,
+    60px -25px 0 5px grey,
+    80px -25px 0 5px grey,
+    100px -25px 0 5px grey,
+    120px -25px 0 5px grey;
+}
+
+.bolt:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 60px;
+    background: #454343FF;
+    top: -30px;
+    left: 60px;
+    transform: skew(-15deg);
+    box-shadow: 20px 0 #454343FF,
+    40px 0 #454343FF,
+    60px 0 #454343FF,
+    80px 0 #454343FF;
+}
+
+.gayka {
+    position: relative;
+    margin-left: 300px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px grey;
+    box-sizing: border-box;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+
+.gayka div {
+    position: absolute;
+}
+
+.top {
+    top: -40px;
+    right: -100%;
+    border-bottom: 40px solid grey;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    height: 0;
+    width: 40px;
+}
+
+.bottom {
+    bottom: -40px;
+    right: -100%;
+    border-top: 40px solid grey;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    height: 0;
+    width: 40px;
+}
+
+.left {
+    bottom: -100%;
+    right: 100%;
+    border-right: 40px solid grey;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    height: 40px;
+    width: 0;
+}
+
+.right {
+    bottom: -100%;
+    left: 100%;
+    border-left: 40px solid grey;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    height: 40px;
+    width: 0;
+}
+
+@keyframes rotate {
+    from {
+        transform: none
+    }
+    to {
+        transform: rotate(180deg)
+    }
+}
+
+.elephant {
+    position: relative;
+    margin-left: 300px;
+    margin-top: 100px;
+    width: 150px;
+    height: 150px;
+    background: grey;
+    box-sizing: border-box;
+    border-radius: 50% 60%;
+}
+
+.elephant:after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -80px;
+    border-right: 83px solid transparent;
+    border-top: 83px solid grey;
+    border-left: 83px solid grey;
+    border-bottom: 83px solid transparent;
+    border-radius: 50%;
+}
+
+.elephant:before {
+    content: "";
+    position: absolute;
+    top: 66px;
+    left: -40%;
+    background: transparent;
+    border: 29px solid grey;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    box-sizing: content-box;
+}
+
+.ear {
+    position: absolute;
+    top: 10%;
+    width: 70px;
+    height: 70px;
+    background: pink;
+    box-sizing: border-box;
+    border-radius: 70% 30%;
+    z-index: 20;
+}
+
+.dots {
+    position: absolute;
+    top: 25%;
+    left: -30%;
+    width: 10px;
+    height: 10px;
+    background: black;
+    box-sizing: border-box;
+    border-radius: 50%;
+    z-index: 20;
+    box-shadow: 2px 0 0 3px white,
+    15px -95px 0 -1px white,
+    30px -80px 0 -1px white,
+    10px -70px 0 -1px white,
+    30px -62px 0 -1px white,
+    45px -67px 0 -1px white,
+    4px -54px 0 -1px white;
+}
+
+.legs {
+    position: absolute;
+    bottom: -15%;
+    left: 30%;
+    background: grey;
+    width: 30px;
+    height: 60px;
+    border-radius: 10%;
+    box-shadow: 40px 0 grey;
+}
+
+.hat {
+    position: absolute;
+    top: -75px;
+    left: -40%;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 75px solid deeppink;
+    transform: rotate(-10deg);
+}
+
+.tail {
+    position: absolute;
+    bottom: 30%;
+    left: 100%;
+    background: grey;
+    width: 10px;
+    height: 40px;
+    border-radius: 10%;
+    transform: rotate(-40deg);
+    animation-name: tail;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes tail {
+    from {
+        transform: rotate(-40deg)
+    }
+    to {
+        transform: rotate(-80deg)
+    }
+}
+
+.wrench {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 250px;
+    width: 60px;
+    height: 200px;
+    background: grey;
+    box-sizing: border-box;
+    transform: rotate(-30deg);
+}
+
+.wrench:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    width: 90px;
+    height: 100px;
+    border-radius: 40%;
+    background: transparent;
+    box-shadow: 0 30px 0 20px grey;
+}
+
+.wrench:after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    right: 0;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 10% 10% 50% 50%;
+    border: 20px solid grey;
+}
 
 
 
